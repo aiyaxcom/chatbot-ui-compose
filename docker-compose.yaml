@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  chatbot:
+    image: ghcr.io/mckaywrigley/chatbot-ui:main
+    restart: always
+    privileged: true
+    user: root
+    ports:
+     - 10010:3000
+    container_name: chatbot
+    environment:
+      - TZ=Asia/Shanghai
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
