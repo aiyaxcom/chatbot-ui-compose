@@ -11,3 +11,8 @@ services:
     environment:
       - TZ=Asia/Shanghai
       - OPENAI_API_KEY=${OPENAI_API_KEY}
+    networks:
+      - nginx_net
+networks:
+  nginx_net:
+    external: true
